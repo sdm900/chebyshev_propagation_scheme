@@ -1,0 +1,120 @@
+
+       The special functions from:
+       The Naval Surface Warfare Center (NSWC) Mathematics Library
+       -----------------------------------------------------------
+This Fortran 90 version has been compiled by Alan Miller.
+Accuracy
+--------
+The accuracy of the single precision versions of these routines is typically
+about 13-14 decimal digits, which is `nearly' double precision accuracy for
+many computer/compiler combinations, while the double precision versions
+are often accurate to 25-27 decimals.   These accuracies assume that the
+machine being used have sufficiently large word sizes.
+The common 4-byte (single precision) and 8-byte (double precision)
+representations of floating-point numbers give nearly 7 and 16 decimal
+digit representations respectively.   The single precision functions in
+this library could be used in double precision where 13-14 decimal digit
+accuracy is adequate, as they will probably be fadter than functions from
+other sources giving full 16 decimal digit accuracy.   Similarly, the
+double precision functions could be used in quadruple precision when
+25-27 decimals is adequate.   The first letter of the function name is
+usually D if it is in double precision.
+Functions
+---------
+N.B. There are many functions and routines which are intended to be used
+only by other functions and not called directly by the user.
+CPABS  Calculates SQRT(x^2 + y^2)
+DCPABS
+CREC   Reciprocal of a complex number
+DCREC
+CDIV   Division of two complex numbers
+CDIVID Division of double precision complex numbers, each stored as a pair
+       of double precision numbers
+CAPO   Conversion from polar to cartesian coordinates
+SIN0   Sine of x*pi/2
+COS0   Cosine of x*pi/2
+SIN1   Sine of x*pi
+DSIN1
+COS1   Cosine of x*pi
+SNHCSH Calculates several hyperbolic functions:
+       SINHM(X) = SINH(X) - X
+       COSHM(X) = COSH(X) - 1
+       COSHMM(X) = COSH(X) - 1 - X*X/2
+CERF   Complex error function, and its complement
+DCERF
+DCERFC
+ERF    Error function, real argument
+DERF
+ERFC   Complementary error function
+DERFC
+ERFI   Inverse error function
+DERFI
+PNDF   Normal distribution function
+PNI    Inverse of the normal distribution function
+DPNI
+DAW    Dawson's integral
+DPDAW
+CTRNLI Complex Fresnel integral E(z)
+FRNL   Real Fresnel integral
+CEXPLI Complex exponential integral
+EXPLI  Real exponential integrals, EI(x), E_(-1)(x) & EXP(-x)*EI(x)
+DEI
+CEXEXI Exponential exponential integral
+SI     Sine integral function
+CI     Cosine integral function
+CLI    Complex logarithmic integral
+ALI    Di-logarithm function
+CGAMMA Complex gamma function & its logarithm
+DCGAMA
+GAMMA  Real gamma function
+DGAMMA
+GAMLN  Log-gamma function for real, positive argument
+DGAMLN
+CPSI   Complex di-gamma function
+DCPSI
+PSI    Di-gamma function
+DPSI
+BETALN Logarithm of the beta function
+DBETLN
+GRATIO Incomplete gamma distribution
+DGRAT
+GAMINV Inverse Incomplete gamma distribution
+DGINV
+BRATIO Incomplete beta distribution
+CBSSLJ Complex Bessel function J_(CNU)(z)
+CBSSLI
+CBESK
+CBKI
+BSSLJ  Real Bessel function of integral order
+BSSLY
+BSSLI
+BESI
+BSSLK
+JAIRY  The Airy function & its derivative
+CAI
+CBI
+AI
+AIE
+BI
+BIE
+CK     Complete complex elliptic integrals of the 1st & 2nd kinds
+CKE
+ELLPI  Real elliptic integrals of the 1st & 2nd kinds
+DELLPI
+EPI    Real elliptic integrals of the 3rd kind
+DEPI
+RFVAL  Incomplete elliptic integral of the 1st kind
+DRFVAL
+RDVAL  Incomplete elliptic integral of the 2nd kind
+DRDVAL
+RJVAL  Incomplete elliptic integral of the 3rd kind
+DRJVAL
+ELLPF  Jacobian Elliptic Function
+ELPFC1 Complex Jacobian Elliptic Function
+PEQ    Weierstrass Elliptic P-function equiharmonic case
+PEQ1
+PLEM   Weierstrass Elliptic P-function lemniscatic case
+PLEM1
+VALR2  Integration of the bivariate normal distribution over polygonal regions
+CIRCV  Integral of the circular Gaussian distribution
+PKILL  Integral of the uncorrelated bivariate normal over a circular region

@@ -1,0 +1,7 @@
+This is a small file to help run the code.
+
+If your accuracy is not as good as desired, try increasing "accuracyfactor".  Basically, this multiplies "pmax" by a value thus increasing the maximum momentum that the system can track.  This by defaults increases the maximum energy that the grid can support, thus modifying the scaling of the hamiltonian.  This will increase the gridsize, increase the scaling of the hamiltonian and the number of terms included in the sum.
+
+You can also increase "eigenfactor" which directly increases the eigen energy range and thus the scaling of the hamiltonian.  This will increase the number of terms in the hamiltonian.
+
+Other things to consider are the space size, the smoothing value, the application of a complex boundary etc.
